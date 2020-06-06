@@ -25,6 +25,7 @@ export class AuthenticationService {
         this.storage.get('USER_INFO').then((response) => {
             if (response) {
                 this.authState.next(true);
+                this.message = response
             }
         });
     }

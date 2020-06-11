@@ -17,6 +17,14 @@ export class LoginPage {
     //     .catch(err => this.userData = `Error ${JSON.stringify(err)}`);
     // }
 
+    loginUserNormal() {
+        var result = {
+            "userId": "001",
+            "userName": "vignesh"
+        }
+        this.authService.login(result)
+    }
+
     loginUser(){
         this.googlePlus.login({})
         .then(result => {

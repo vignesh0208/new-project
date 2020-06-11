@@ -15,16 +15,22 @@ import { AuthenticationService } from './services/authentication.service';
 
 import { GooglePlus } from '@ionic-native/google-plus/ngx';
 
+import { Camera } from '@ionic-native/camera/ngx'
+import { ImagePicker } from '@ionic-native/image-picker/ngx';
+import { NgxIonicImageViewerModule } from 'ngx-ionic-image-viewer';
+
 @NgModule({
     declarations: [AppComponent],
     entryComponents: [],
-    imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, IonicStorageModule.forRoot()],
+    imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, IonicStorageModule.forRoot(), NgxIonicImageViewerModule],
     providers: [
         StatusBar,
         SplashScreen,
         AuthGuardService,
         AuthenticationService,
         GooglePlus,
+        Camera,
+        ImagePicker,
         { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
     ],
     bootstrap: [AppComponent]

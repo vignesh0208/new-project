@@ -1,0 +1,20 @@
+ion-content {
+    position: relative;
+}
+
+.fix-button {
+    position: absolute;
+    bottom: 48px;
+    right: 16px;
+    left: 16px;
+}
+
+.fix-button-1 {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+    text-align: center;
+    color: #3880ff;
+    font-size: 14px;
+}

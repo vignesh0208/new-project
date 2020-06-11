@@ -1,0 +1,25 @@
+<ion-content>
+    <ion-list>
+        <ion-list-header>Single Selection</ion-list-header>
+        <ion-item>
+            <ion-label>Gender</ion-label>
+            <ion-select [(ngModel)]="gender" placeholder="Select One">
+                <ion-select-option value="f">Female</ion-select-option>
+                <ion-select-option value="m">Male</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <ng-container *ngIf="gender != ''">
+            <ion-item>
+                <ion-label>Hair Color</ion-label>
+                <ion-select (ionChange)="onModelChange()" [(ngModel)]="hairColor" placeholder="Select Color">
+                    <ion-select-option value="brown">Brown</ion-select-option>
+                    <ion-select-option value="blonde">Blonde</ion-select-option>
+                    <ion-select-option value="black">Black</ion-select-option>
+                    <ion-select-option value="red">Red</ion-select-option>
+                </ion-select>
+            </ion-item>
+        </ng-container>
+    </ion-list>
+    <ion-button class="fix-button" [disabled]="!isenabled" routerLink="/title-desc" routerDirection="forward" (click)="pushValue()">NEXT</ion-button>
+    <div routerLink="/image-page" class="fix-button-1" routerDirection="backward"> &lt; Prev </div>
+</ion-content>

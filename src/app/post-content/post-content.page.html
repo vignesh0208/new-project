@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar>
+        <div class="flex">
+            <ion-icon name="arrow-back" (click)="goBack()"></ion-icon>
+            <ion-icon name="share"></ion-icon>
+        </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-slides pager="true" [options]="slideOpts">
+        <ng-container *ngFor="let image of serviceService.Store.image">
+            <ion-slide>
+                <ion-img src="data:image/jpeg;base64,{{ image }}"></ion-img>
+            </ion-slide>
+        </ng-container>
+    </ion-slides>
+    <div class="pricing">
+        <h2><span class="margin-left-0"><ion-img class="rupee" src="../../assets/icon/rupee.svg"></ion-img> {{ serviceService.Store.price }}</span></h2>
+        <p class="title">{{ serviceService.Store.title }}</p>
+        <p class="value">{{ serviceService.Store.gender }}</p>
+    </div>
+    <div class="description">
+        <h3>Description</h3>
+        <p>{{ serviceService.Store.description }}</p>
+    </div>
+    <ion-button class="fix-button" routerLink="/" routerDirection="forward" (click)="postValue()">POST</ion-button>
+</ion-content>

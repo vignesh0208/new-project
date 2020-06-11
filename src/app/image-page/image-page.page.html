@@ -1,0 +1,34 @@
+<ion-content ion-padding>
+    <ion-grid>
+        <ion-row>
+            <ng-container *ngIf="arrayCount == true">
+                <ng-container *ngFor="let image of imageData1">
+                    <ion-col size="6" (click)="showItem()">
+                        <div class="ion-padding img">
+                            <ion-img class="icon" src="{{ image }}"></ion-img>
+                        </div>
+                    </ion-col>
+                </ng-container>
+            </ng-container>
+            <ng-container *ngIf="arrayCount == false">
+                <ng-container *ngFor="let image of imageData; index as i;">
+                    <ion-col class="total-col" size="6">
+                        <div class="ion-padding img1">
+                            <div class="cancel" (click)="delectImage(i)">
+                                <ion-icon name="close"></ion-icon>
+                            </div>
+                            <ion-img ionImgViewer class="icon1" src="data:image/jpeg;base64,{{ image }}"></ion-img>
+                        </div>
+                    </ion-col>
+                </ng-container>
+                <ion-col size="6" (click)="showItem()">
+                    <div class="ion-padding img">
+                        <ion-img class="icon" src="../../assets/icon/add.svg"></ion-img>
+                    </div>
+                </ion-col>
+            </ng-container>
+        </ion-row>
+    </ion-grid>
+    <ion-button class="fix-button" [disabled]="!isenabled" routerLink="/type-selection" routerDirection="forward" (click)="pushValue()">NEXT</ion-button>
+    <div routerLink="/" class="fix-button-1" routerDirection="backward"> &lt; Prev </div>
+</ion-content>

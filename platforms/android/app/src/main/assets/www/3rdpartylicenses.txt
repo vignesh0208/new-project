@@ -38,10 +38,16 @@ MIT
 @angular/router
 MIT
 
+@ionic-native/camera
+MIT
+
 @ionic-native/core
 MIT
 
 @ionic-native/google-plus
+MIT
+
+@ionic-native/image-picker
 MIT
 
 @ionic-native/splash-screen
@@ -186,6 +192,9 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
+
+ngx-ionic-image-viewer
+MIT
 
 regenerator-runtime
 MIT

@@ -39,7 +39,7 @@ export class AuthenticationService {
         };
         this.message = dummy_response
         this.storage.set('USER_INFO', dummy_response).then((response) => {
-            this.router.navigate(['dashboard']);
+            this.router.navigate(['members']);
             this.authState.next(true);
         });
     }

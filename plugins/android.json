@@ -36,6 +36,9 @@
     },
     "cordova-plugin-telerik-imagepicker": {
       "PACKAGE_NAME": "com.newproject"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.newproject"
     }
   },
   "dependent_plugins": {}

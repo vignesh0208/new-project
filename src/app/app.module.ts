@@ -18,6 +18,7 @@ import { GooglePlus } from '@ionic-native/google-plus/ngx';
 import { Camera } from '@ionic-native/camera/ngx'
 import { ImagePicker } from '@ionic-native/image-picker/ngx';
 import { NgxIonicImageViewerModule } from 'ngx-ionic-image-viewer';
+import { File } from '@ionic-native/file/ngx';
 
 @NgModule({
     declarations: [AppComponent],
@@ -30,6 +31,7 @@ import { NgxIonicImageViewerModule } from 'ngx-ionic-image-viewer';
         AuthenticationService,
         GooglePlus,
         Camera,
+        File,
         ImagePicker,
         { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
     ],

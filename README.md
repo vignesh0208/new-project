@@ -54,7 +54,7 @@ sudo apt install openjdk-8-jdk-headless
 
 #### Install gradle
 
-* Floow this [link](https://gradle.org/install/)
+* Follow this [link](https://gradle.org/install/)
 
 #### Now create andriod package
 
